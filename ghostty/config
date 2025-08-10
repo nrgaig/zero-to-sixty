@@ -1,5 +1,4 @@
 command = /opt/homebrew/bin/fish --login --interactive
-theme = wez
 background-opacity = 0.85
 shell-integration-features = no-cursor
 cursor-color = #52ad70

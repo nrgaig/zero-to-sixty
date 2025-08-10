@@ -34,32 +34,4 @@ Plug 'tpope/vim-commentary'
 "map \b <Action>(ToggleLineBreakpoint)
 
 
-
-" Set leader key
-let mapleader = " "
-
-" --- Editor Options ---
-set ignorecase
-set smartcase
-set number
-set relativenumber
-set splitbelow
-set splitright
-set timeoutlen=300
-set updatetime=250
-set colorcolumn=120
-
-
-" --- Clipboard Keymaps ---
-vnoremap <leader>y "+y
-nnoremap <leader>y "+y
-vnoremap <leader>Y "+Y
-nnoremap <leader>Y "+Y
-vnoremap <leader>p "+p
-nnoremap <leader>p "+p
-vnoremap <leader>P "+P
-nnoremap <leader>P "+P
-
-" --- Move Lines Up/Down in Visual Mode ---
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
+source ~/.config/vim/vimrc
