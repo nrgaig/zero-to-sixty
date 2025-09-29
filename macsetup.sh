@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 echo "Starting setup for new mac"
 
 #setting mac defaults
@@ -26,7 +26,7 @@ echo "Create relevant directories... Done"
 # devenv setup:
 # first install xcode or xcode tools (can be simpler alt way later)
 # accept xcodebuild license
-sudo xcodebuild -license
+# sudo xcodebuild -license
 
 # installing homebrew 
 # preper env var in .zshenv
@@ -34,18 +34,23 @@ echo 'export HOMEBREW_CASK_OPTS="--appdir=${HOME}/Applications"' >> ~/.zshenv
 echo 'set -x  HOMEBREW_CASK_OPTS "--appdir=${HOME}/Applications"' >> ~/.config/fish/config.fish
 # installing homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.config/fish/config.fish
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 echo "Installing Homebrew... Done"
 
 # # install brew formulaes
-brew install fish neovim tmux python@3.9 node@22
+brew install fish neovim python@3.14 node@22
 echo "Installing Homebrew formulaes... Done"
 
 # # after, installing brew casks
-brew install --cask --appdir=${HOME}/Applications ghostty raycast orbstack legcord git-credential-manager
+brew install --cask --appdir=${HOME}/Applications ghostty raycast git-credential-manager aerospace vmware-fusion textmate appcleaner
 echo "Installing Homebrew casks... Done"
+
+# changing default login shells
+command -s fish
+echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
+chsh -s /opt/homebrew/bin/fish
+echo "fish is now the default shell"
 
 # set up git
 git config --global user.name "MrFrost"
