@@ -9,3 +9,4 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 alias vim='NVIM_APPNAME="nvim-kickstart" nvim' 
 alias vi='NVIM_APPNAME="nvim-personal" nvim' 
+fish_add_path $HOME/.local/bin
