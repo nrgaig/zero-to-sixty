@@ -1,5 +1,4 @@
-theme = pro
-background-opacity = 0.85
+theme = frosty
 shell-integration-features = no-cursor
 cursor-color = #52ad70
 font-feature = -calt, -liga, -dlig
