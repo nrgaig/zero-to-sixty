@@ -43,7 +43,7 @@ brew install fish neovim python@3.14 node@22
 echo "Installing Homebrew formulaes... Done"
 
 # # after, installing brew casks
-brew install --cask --appdir=${HOME}/Applications ghostty raycast git-credential-manager aerospace vmware-fusion textmate appcleaner
+brew install --cask --appdir=${HOME}/Applications ghostty git-credential-manager flashspace textmate appcleaner
 echo "Installing Homebrew casks... Done"
 
 # changing default login shells
